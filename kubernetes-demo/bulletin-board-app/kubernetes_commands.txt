@@ -1,0 +1,3 @@
+kubectl apply -f bb.yaml
+
+localhost:30001
