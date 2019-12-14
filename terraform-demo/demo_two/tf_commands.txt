@@ -3,3 +3,12 @@ terraform validate
 terraform plan -out main.tfplan
 terraform apply "main.tfplan"
 terraform destroy
+
+# Passing variables
+terraform plan -var 'access_key=abc123' -var 'secret_key=abc123'
+
+# Loading variables from some file
+terraform plan -var-file base.tfvars
+
+# Terraform will also parse any environment variables that are prefixed with TF_VAR. For example, if
+# Terraform finds an environment variable named: TF_VAR_access_code=abc123
