@@ -7,6 +7,9 @@ app = Flask(__name__)
 def hello():
     return "Flask inside Docker!!"
 
+@app.route("/api/gateway")
+def hello():
+    return "API inside Docker!!"
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
